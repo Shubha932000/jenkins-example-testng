@@ -35,6 +35,7 @@ def getTestResultsSummary(reportPath) {
   xmlFiles.each { file ->
     def testReport = readFile(file.path)
     def parsedReport = new XmlSlurper().parseText(testReport)
+    echo parsedReport.toString()
 
     // Extract relevant test summary details like total tests, failures, errors, etc.
     def testsRun = parsedReport.@tests
