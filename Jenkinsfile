@@ -10,6 +10,9 @@ pipeline {
   post {
     always {
       junit 'target/surefire-reports/*.xml'
+      script {
+              sendSplunkConsoleLog rawMessage: true
+      }
     }
   }
 }
