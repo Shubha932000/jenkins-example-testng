@@ -10,6 +10,7 @@ pipeline {
   post {
     always {
       junit 'target/surefire-reports/*.xml'
+      sendSplunkConsoleLog() // Sends console log to Splunk
     }
   }
 }
