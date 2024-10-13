@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  options {
+          timeout(time: 1, unit: 'HOURS')
+          sendSplunkConsoleLog()
+  }
   stages {
     stage('Run the tests') {
       steps {
@@ -10,7 +14,6 @@ pipeline {
   post {
     always {
       junit 'target/surefire-reports/*.xml'
-      sendSplunkConsoleLog()
     }
   }
 }
