@@ -11,7 +11,12 @@ pipeline {
     always {
       junit 'target/surefire-reports/*.xml'
       script {
-              sendSplunkConsoleLog rawMessage: true
+          // Assuming you want to log the test results or any other relevant message
+          def logMessage = "Test results processed."
+          sendSplunkConsoleLog {
+            rawMessage true
+            message logMessage  // Pass your message here
+          }
       }
     }
   }
