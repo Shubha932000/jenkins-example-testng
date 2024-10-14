@@ -2,7 +2,7 @@ pipeline {
   agent any
   options {
           timeout(time: 1, unit: 'HOURS')
-          sendSplunkConsoleLog()
+//           sendSplunkConsoleLog()
   }
   stages {
     stage('Run the tests') {
