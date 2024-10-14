@@ -14,7 +14,7 @@ pipeline {
     stage('Run TestRunner class') {
       steps {
         // Run the TestRunner class
-        sh './mvnw exec:java -Dexec.mainClass="com.planetpope.testng.TestRunner"'
+        sh './mvnw exec:java -Dexec.mainClass="src.test.java.com.planetpope.testng.TestRunner"'
       }
     }
   }
