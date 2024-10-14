@@ -1,18 +1,26 @@
 pipeline {
   agent any
   options {
-          timeout(time: 1, unit: 'HOURS')
-//           sendSplunkConsoleLog()
+    timeout(time: 1, unit: 'HOURS')
+    // sendSplunkConsoleLog() // Uncomment if you want to send logs to Splunk
   }
   stages {
-    stage('Run the tests') {
+    stage('Compile the project') {
       steps {
-        sh './mvnw clean test'
+        // Compile the project
+        sh './mvnw clean compile'
+      }
+    }
+    stage('Run TestRunner class') {
+      steps {
+        // Run the TestRunner class
+        sh './mvnw exec:java -Dexec.mainClass="com.planetpope.testng.TestRunner"'
       }
     }
   }
   post {
     always {
+      // Generate and archive test reports
       junit 'target/surefire-reports/*.xml'
     }
   }

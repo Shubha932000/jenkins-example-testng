@@ -21,7 +21,7 @@ public class BasicTestCase {
 
     @Test
     public void isTrue() {
-        boolean value = true;
+        boolean value = false;
         Assert.assertTrue(value);
     }
 
