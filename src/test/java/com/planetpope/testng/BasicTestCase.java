@@ -13,6 +13,27 @@ public class BasicTestCase {
     }
 
     @Test
+    public void addition2() {
+        int expected = 41;
+        int actual = 22 + 20;
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void addition3() {
+        int expected = 20;
+        int actual = 22 + 20;
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void addition4() {
+        int expected = 43;
+        int actual = 22 + 20;
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
     public void subtraction() {
         int expected = 42;
         int actual = 84 - 42;
