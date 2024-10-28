@@ -14,14 +14,14 @@ public class BasicTestCase {
 
     @Test
     public void addition2() {
-        int expected = 41;
+        int expected = 42;
         int actual = 22 + 20;
         Assert.assertEquals(actual, expected);
     }
 
     @Test
     public void addition3() {
-        int expected = 20;
+        int expected = 42;
         int actual = 22 + 20;
         Assert.assertEquals(actual, expected);
     }
