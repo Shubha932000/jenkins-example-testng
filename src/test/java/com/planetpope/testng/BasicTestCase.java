@@ -7,7 +7,7 @@ public class BasicTestCase {
 
     @Test
     public void addition() {
-        int expected = 42;
+        int expected = 40;
         int actual = 22 + 20;
         Assert.assertEquals(actual, expected);
     }
@@ -48,7 +48,7 @@ public class BasicTestCase {
 
     @Test
     public void isFalse() {
-        boolean value = false;
+        boolean value = true;
         Assert.assertFalse(value);
     }
 }
