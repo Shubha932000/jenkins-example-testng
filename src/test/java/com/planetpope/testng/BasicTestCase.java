@@ -35,7 +35,7 @@ public class BasicTestCase {
 
     @Test
     public void subtraction() {
-        int expected = 42;
+        int expected = 40;
         int actual = 84 - 42;
         Assert.assertEquals(actual, expected);
     }
