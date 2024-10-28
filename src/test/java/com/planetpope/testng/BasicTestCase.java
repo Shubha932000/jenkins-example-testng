@@ -28,7 +28,7 @@ public class BasicTestCase {
 
     @Test
     public void addition4() {
-        int expected = 43;
+        int expected = 42;
         int actual = 22 + 20;
         Assert.assertEquals(actual, expected);
     }
